@@ -34,7 +34,7 @@ class Droplet(object):
 
     @property
     def group(self):
-        return Translator(self).group
+        return Translator(self.name).group
 
 
 class Translator(object):
