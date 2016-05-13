@@ -11,9 +11,10 @@ class TerraformState(object):
     @property
     def droplets(self):
         return [
-            Droplet(self.state['modules'][0]['resources'][k]) for
-                k in self.droplet_names
+            Droplet(self.state['modules'][0]['resources'][k])
+                for k in self.droplet_names
         ]
+
 
 class Droplet(object):
     def __init__(self, droplet_json):
