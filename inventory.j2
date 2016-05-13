@@ -1,0 +1,8 @@
+{% for droplet in droplets %}{{ droplet.name }} ansible_ssh_user=root ansible_ssh_host={{ droplet.public_ip}}
+{% endfor %}
+
+{% for group in groups %}
+[{{ group|pluralize }}]
+{% for name in groupings[group] %}{{ name  }}{% endfor %}
+{% endfor %}
+
