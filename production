@@ -1,0 +1,10 @@
+prod-redis01 ansible_ssh_user=root ansible_ssh_host=159.203.1.55 private_ip=10.137.32.68
+prod-webapp01 ansible_ssh_user=root ansible_ssh_host=159.203.41.228 private_ip=10.137.32.72
+
+
+[rediss]
+prod-redis01
+
+[webapps]
+prod-webapp01
+
